@@ -14,11 +14,12 @@
 
 [Advent of Code](https://adventofcode.com/) is an annual coding challenge that runs from December 1st to December 25th. Each day reveals a new programming puzzle to solve, perfect for warming up your coding skills during the festive season!
 
-## ⭐ Progress
+## ⭐ 2025 Progress
 
 | Day | Stars |
 |:---:|:-----:|
 | 01  | ⭐⭐ |
+| 02  | ⭐⭐ |
 
 ## 🦌 Getting Started
 
