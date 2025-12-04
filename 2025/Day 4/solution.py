@@ -30,9 +30,9 @@ def findSolutionNew(data: str) -> int:
         count, data = findSolution(data)
         answer += count
     return answer
-            
-def isValid(row: int, col: int, data: List[str]) -> bool:
-    adjescent = 0
+          
+def isValid(row: int, col: int, data: List) -> bool:
+    adjascent = 0
     
     if data[row][col] != '@':
         return False
