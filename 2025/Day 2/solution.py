@@ -4,7 +4,7 @@ from typing import List
 with open('formatted_sequence.json', 'r') as f:
     data = json.load(f)
     
-def decodeInvalid(data: List[dict]) -> int:
+def decodeInvalid(data: List[dict[str, int]]) -> int:
     answer = 0
     
     for entry in data:
@@ -12,13 +12,12 @@ def decodeInvalid(data: List[dict]) -> int:
         end = entry['end']
         
         for i in range(start, end + 1, 1):
-            if not isValidNew(i):
+            if not isValidNew(str(i)):
                 answer += i
         
     return answer
         
-def isValid(number: int) -> bool:
-    number = str(number)
+def isValid(number: str) -> bool:
     
     if len(number) % 2 != 0:
         return True
@@ -32,8 +31,7 @@ def isValid(number: int) -> bool:
     
     return True
 
-def isValidNew(number: int) -> bool:
-    number = str(number)
+def isValidNew(number: str) -> bool:
     
     for i in range(1, (len(number) // 2) + 1, 1):
         if len(number) % i != 0:

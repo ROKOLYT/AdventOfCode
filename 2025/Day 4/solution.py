@@ -15,17 +15,19 @@ def findSolution(data: str) -> int:
     
     for row in range(rows):
         for col in range(cols):
-            if isValid(row, col, lines):
+            if isValid(row, col, lines): # type: ignore 
+                # don't check the type because type checking is written for the new solution which uses List[List[str]], 
+                # but this also works because lines is List[str]
                 answer += 1
                 
     return answer
 
 def findSolutionNew(data: List[List[str]], answer: int = 0) -> int:
     original_answer = answer
-    new_data = []
+    new_data: List[List[str]] = []
     
     for i, row in enumerate(data):
-        new_line = []
+        new_line: List[str] = []
         
         for j, elem in enumerate(row):
             if isValid(i, j, data):
@@ -40,7 +42,7 @@ def findSolutionNew(data: List[List[str]], answer: int = 0) -> int:
     
     return answer
           
-def isValid(row: int, col: int, data: List) -> bool:
+def isValid(row: int, col: int, data: List[List[str]]) -> bool:
     adjascent = 0
     
     if data[row][col] != '@':

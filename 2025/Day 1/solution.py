@@ -1,5 +1,4 @@
 import json
-from tracemalloc import start
 from typing import List
 
 with open('dialseq.json', 'r') as file:

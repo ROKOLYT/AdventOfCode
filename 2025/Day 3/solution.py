@@ -24,7 +24,7 @@ def findBiggestJoltage(s: str) -> int:
 
 def findBiggestJoltageNew(s: str, n: int) -> int:
     splits = splitString(s)
-    digits = []
+    digits: List[int] = []
     prevIndex = -1
     
     for i in range(1, n + 1, 1):
@@ -46,7 +46,7 @@ def testFindBiggestJoltageNew():
     assert findBiggestJoltageNew("543216789", 4) == 6789
     
     
-def splitString(s: str) -> List[str]:
+def splitString(s: str) -> List[int]:
     return [int(s[i:i+1]) for i in range(len(s))]
 
 if __name__ == '__main__':
