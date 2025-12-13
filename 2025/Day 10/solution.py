@@ -3,7 +3,7 @@ import itertools
 
 with open('formatted_input.json', 'r') as f:
     data = json.load(f)
-    
+
 def findSolution(data: list[dict[str, list[int] | list[list[int]]]]) -> int:
     result = 0
     
